@@ -1,5 +1,5 @@
 (function(){
-    
+
     angular
         .module('coderMdb')
         .service('movieSrv', MovieService);
@@ -31,7 +31,7 @@
         };
 
         function addMovie(movie){
-            %http.post('/api/movies',movie)
+            $http.post('/api/movies',movie)
             .then(function(res){
                 self.movies.push(res.data);
             })
